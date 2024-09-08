@@ -1,0 +1,15 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  mar4ehk0\BaseEntityBundle\:
+    resource: '../src/'
+    exclude:
+      - '../src/DependencyInjection/'
+
+  mar4ehk0\BaseBundle\Doctrine\MigrationEventListener:
+    tags:
+      - { name: doctrine.event_listener, event: postGenerateSchema, connection: default }

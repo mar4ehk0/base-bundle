@@ -1,0 +1,35 @@
+{
+    "name": "mar4ehk0/base-bundle",
+    "version": "0.1.0",
+    "type": "symfony-bundle",
+    "description": "Base Bundle for my projects",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.2",
+        "doctrine/dbal": "^4.1",
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^3.2",
+        "symfony/uid": "^7.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "mar4ehk0\\BaseBundle\\": "src/"
+        }
+    },
+    "scripts": {
+        "test" : "./vendor/bin/simple-phpunit"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "7.1.*"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64"
+    }
+}
